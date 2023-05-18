@@ -15,7 +15,7 @@ const iconfav = document.getElementById('icon-fav');
 const mainimage = document.getElementById('mainimage');
 const cover = document.getElementById('cover');
 
-console.log('hi);
+
 
 homebtn.addEventListener('click',function(){
     homepage.style.display='block';
@@ -73,7 +73,7 @@ textinput.addEventListener('keyup',function(e){
       // console.log('Search results:');
       // results.forEach(result => console.log(result));
     });
-  }
+    
   
   })
 
