@@ -21,8 +21,7 @@ homebtn.addEventListener('click',function(){
     favpage.style.display='none';
     texthome.className="active";
     textfav.className="";
-    iconhome.className="material-symbols-outlined active";
-    iconfav.className="material-symbols-outlined";
+   
     textinput.value='';
     heros=[];
     renderList();
@@ -33,8 +32,7 @@ favbtn.addEventListener('click',function(){
   favpage.style.display='block';
   textfav.className="active";
   texthome.className="";
-  iconhome.className="material-symbols-outlined";
-  iconfav.className="material-symbols-outlined active";
+  
   
   rendercards();
 })
@@ -98,8 +96,8 @@ textinput.addEventListener('keyup',function(e){
     resultElement.setAttribute("class", "result");
     // <img src=${"icons\superman.jpg"} alt="loading" id=${hero.id} ></img>
     resultElement.innerHTML=`
-    <img src=${hero.images.lg} alt="loading" id=${hero.id} ></img>
-    <span >${hero.name}</span>
+    <img src=${hero.images.lg} alt="loading" data-id=${hero.id} ></img>
+    <span  data-id=${hero.id} >${hero.name}</span>
     <button class="card-button fav-button"  data-id=${hero.id}> ${text}</button>
     `;
     
@@ -112,7 +110,8 @@ textinput.addEventListener('keyup',function(e){
    document.addEventListener('click',function(e){
     let target = e.target;
     let parent = target.parentNode;
-   // console.log(parent);
+    // console.log(target);
+    // console.log(parent);
     if(target.className === 'card-button fav-button'){
         let  task_id = target.getAttribute('data-id');
         const currentText = target.textContent.trim();
@@ -125,6 +124,13 @@ textinput.addEventListener('keyup',function(e){
         }
       
 
+    }else if((parent.className === 'result') && (target.className !== 'card-button fav-button')){
+      console.log('hi');
+      cover.style.display="block";
+        cover.innerHTML="";
+        window.scrollTo(0,0);
+      //  cover.style.position="fixed";
+        openDetails(target.getAttribute('data-id'));
     }
     else if(target.className === 'nowinput'){
 
@@ -154,7 +160,16 @@ textinput.addEventListener('keyup',function(e){
     let ele = favoriteheros.filter(char=>{
       return char.id === parseInt(heroid,10);
     })
-    createPage(ele[0]);
+    if(ele.length === 0){
+      let ele1 = heros.filter(char=>{
+        return char.id === parseInt(heroid,10);
+      })
+      createPage(ele1[0]);
+    }else{
+      console.log(ele[0]);
+      createPage(ele[0]);
+    }
+    
    }
    function createPage(hero){
     
@@ -253,6 +268,7 @@ function removefromfavorites(task_id){
 function rendercards(){
   cardlist.innerHTML='';
   favoriteheros=JSON.parse(localStorage.getItem("favoriteheros"));
+  // console.log(favoriteheros);
   if(favoriteheros === null){
     return;
   }
@@ -276,3 +292,5 @@ function addcard(favoritehero){
     cardlist.append(cardElement);
 
 }
+
+
