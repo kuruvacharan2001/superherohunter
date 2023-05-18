@@ -16,7 +16,6 @@ const mainimage = document.getElementById('mainimage');
 const cover = document.getElementById('cover');
 
 
-
 homebtn.addEventListener('click',function(){
     homepage.style.display='block';
     favpage.style.display='none';
@@ -222,9 +221,16 @@ function addtofavorites(task_id){
   let ele = heros.filter(char=>{
     return char.id === parseInt(task_id,10);
   })
-  favoriteheros.push(ele[0]);
+  if(favoriteheros=== null){
+    favoriteheros=[];
+    favoriteheros.push(ele[0]);
+  }else{
+    favoriteheros.push(ele[0]);
+  }
+  
   let favoritehero_serialized=JSON.stringify(favoriteheros);
   localStorage.setItem("favoriteheros",favoritehero_serialized);
+  
  // console.log(favoriteheros);
 }
 function removefromfavorites(task_id){
@@ -239,6 +245,7 @@ function removefromfavorites(task_id){
    favoriteheros=ele;
    let favoritehero_serialized=JSON.stringify(favoriteheros);
    localStorage.setItem("favoriteheros",favoritehero_serialized);
+   
    rendercards();
   //console.log(favoriteheros);
   
@@ -269,5 +276,3 @@ function addcard(favoritehero){
     cardlist.append(cardElement);
 
 }
-
-
