@@ -201,7 +201,8 @@ textinput.addEventListener('keyup',function(e){
 
    function checkfavorites(hero_id){
     favoriteheros=JSON.parse(localStorage.getItem("favoriteheros"));
-
+    if(favoriteheros === null){
+        return false;
     let ele = favoriteheros.filter(char=>{
       return char.id === parseInt(hero_id,10);
     })
