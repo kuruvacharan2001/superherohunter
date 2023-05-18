@@ -75,7 +75,7 @@ textinput.addEventListener('keyup',function(e){
     });
   }
   
-  });
+  })
 
   function renderList(){
     searchresults.innerHTML='';
@@ -149,6 +149,9 @@ textinput.addEventListener('keyup',function(e){
    });
    function openDetails(heroid){
     favoriteheros=JSON.parse(localStorage.getItem("favoriteheros"));
+    if(favoriteheros === null){
+      return;
+    }
     let ele = favoriteheros.filter(char=>{
       return char.id === parseInt(heroid,10);
     })
@@ -201,8 +204,9 @@ textinput.addEventListener('keyup',function(e){
 
    function checkfavorites(hero_id){
     favoriteheros=JSON.parse(localStorage.getItem("favoriteheros"));
-    if(favoriteheros === null){
-        return false;
+    if(favoriteheros=== null){
+      return false;
+    }
     let ele = favoriteheros.filter(char=>{
       return char.id === parseInt(hero_id,10);
     })
@@ -225,6 +229,9 @@ function addtofavorites(task_id){
 }
 function removefromfavorites(task_id){
   favoriteheros=JSON.parse(localStorage.getItem("favoriteheros"));
+  if(favoriteheros === null){
+    return;
+  }
   let ele = favoriteheros.filter(char=>{
     return char.id !== parseInt(task_id,10);
   })
@@ -239,6 +246,9 @@ function removefromfavorites(task_id){
 function rendercards(){
   cardlist.innerHTML='';
   favoriteheros=JSON.parse(localStorage.getItem("favoriteheros"));
+  if(favoriteheros === null){
+    return;
+  }
   for(let i=0;i<favoriteheros.length;i++){
     addcard(favoriteheros[i]);
   }
