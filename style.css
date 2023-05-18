@@ -66,8 +66,9 @@ body::-webkit-scrollbar{
 
 .active{
   color:rgb(255, 0, 0);
-  font-size: x-large;
-  font-weight: 900;
+  /* font-size: x-large; */
+  /* font-weight: 900; */
+  text-decoration: underline;
   
 }
 .search-container{
