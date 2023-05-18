@@ -15,7 +15,7 @@ const iconfav = document.getElementById('icon-fav');
 const mainimage = document.getElementById('mainimage');
 const cover = document.getElementById('cover');
 
-
+console.log('hi);
 
 homebtn.addEventListener('click',function(){
     homepage.style.display='block';
