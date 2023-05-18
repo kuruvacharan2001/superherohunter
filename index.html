@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,1,0" />
+   
+    <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+      <nav class="navbar">
+        
+        <div class="navbar-brand">
+          <a href="#"><img src="icons\superhero.jpg" alt="loading" srcset="">SuperHero Hunter</a>
+        </div>
+        <ul class="navbar-menu">
+          <li id="home" class="navbar-item ">
+            <a href="#"><span class="material-symbols-outlined active" id="icon-home">
+              home
+              </span>
+             <span id="text-home" class="active"> Home</span> </a>
+          </li>
+          <span style="width: 20px;"></span>
+          <li id="fav" class="navbar-item">
+            <a href="#"><span class="material-symbols-outlined" id="icon-fav">
+              favorite
+              </span>
+              <span id="text-fav">Favorites</span>
+              </a>
+          </li>
+          <span style="width: 100px;"></span>
+        </ul>
+      </nav>
+      
+        <div id="homepage">
+          <div class="search-container">
+            <div class="search-input">
+              <span id="input-icon" class="material-symbols-outlined">
+                search
+                </span>
+              <input type="text" id="text-input" class="nowinput" autocomplete="off" placeholder="Search...">
+            
+            </div>
+            <div>
+               <div id="search-results" class="">
+            <!-- <div class="result" >
+              <img src="https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/lg/1-a-bomb.jpg" alt="loading" >
+              <span >Superman</span>
+              <button> Add to Favorites</button>
+            </div> -->
+           
+           </div>
+           <div class="images" id="mainimage">
+            <img src="https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/lg/620-spider-man.jpg" alt="loading" >
+          <img src="https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/lg/346-iron-man.jpg" alt="loading" >
+          <img src="https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/lg/644-superman.jpg" alt="loading" >
+          <img src="https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/lg/332-hulk.jpg" alt="loading" >
+          <img src="https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/lg/149-captain-america.jpg" alt="loading" >
+          <img src="https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/lg/30-ant-man.jpg" alt="loading" >
+          <img src="https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/lg/70-batman.jpg" alt="loading" >
+          <img src="https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/lg/226-doctor-strange.jpg" alt="loading" >
+          <img src="https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/lg/106-black-panther.jpg" alt="loading" >
+          <img src="https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/lg/332-hulk.jpg" alt="loading" >
+          <img src="https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/lg/149-captain-america.jpg" alt="loading" >
+          <img src="https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/lg/30-ant-man.jpg" alt="loading" >
+         </div>
+          </div>
+          
+            
+          </div>
+        </div>
+        <div id="favoritespage">
+         <div id="cardlist">
+          <!-- <div class="card">
+            <img src="https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/lg/1-a-bomb.jpg" alt="Image">
+            <div class="card-body">
+              <h3 class="card-title">superman</h3>
+              <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+              <button class="card-button">Remove from favorites</button>
+            </div> -->
+            
+            
+        </div>
+        <div id="cover">
+          <div>
+            <!-- <button id="closebtn"><span class="material-symbols-outlined">
+              close
+              </span></button>
+            <div class="details">
+              <img src="https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/lg/1-a-bomb.jpg" alt="Image">
+              <div id="mname"> A-Bomb </div>
+              <div class="mdetails">
+                <div class="thing" id="biography">
+                  <span class="head" style="padding-left: 80px;"> <b>Biography</b> </span>
+                  <span><b>FullName:</b> <span>Richard Milhouse Jones</span></span>
+                  <span><b>PlaceOfBirth:</b> <span>Scarsdale, Arizona</span> </span>
+                  <span> <b>FirstAppearance:</b> <span>Hulk Vol 2 #2 (April, 2008) (as A-Bomb)</span> </span>
+                  <span> <b>Publisher:</b> <span>Marvel Comics</span> </span>
+                </div>
+                <div class="thing">
+                  <span class="head" ><b>Appearance</b></span>
+                  <span><b>Gender:</b> <span>Male</span></span>
+                  <span><b>Race:</b> <span>Human</span> </span>
+                  <span> <b>Height:</b> <span>209cm</span> </span>
+                  <span><b>Weight:</b> <span>65kg</span> </span>
+                  <span> <b>EyeColor:</b> <span>brown</span> </span>
+                  <span><b>HairColor:</b> <span>No Hair</span> </span>
+                </div>
+                <div class="thing" style="border: none;">
+                  <span class="head"><b>PowerStats</b></span>
+                  <span><b>Intelligence:</b> <span>100</span></span>
+                  <span><b>Strength:</b> <span>90</span> </span>
+                  <span><b>Speed:</b>  <span>15</span> </span>
+                  <span><b>Durability:</b> <span>10</span> </span>
+                  <span><b>Power:</b>  <span>30</span> </span>
+                  <span><b>Combat:</b> <span>64</span> </span>
+                </div>
+              </div>
+              
+  
+            </div> -->
+          </div>
+        </div>
+       
+         </div>
+       
+
+        </div>
+         
+        
+
+<!-- Search Results List -->
+<!-- <div class="search-results-container">
+  <div class="search-result">
+    <img src="image-1.jpg" alt="Image 1">
+    <div class="search-result-details">
+      <h3>Search Result Title</h3>
+      <p>Search result description goes here.</p>
+      <a href="#"><i class="fa fa-heart-o"></i></a>
+    </div>
+  </div>
+  
+  <div class="search-result">
+    <img src="image-2.jpg" alt="Image 2">
+    <div class="search-result-details">
+      <h3>Search Result Title</h3>
+      <p>Search result description goes here.</p>
+      <a href="#"><i class="fa fa-heart-o"></i></a>
+    </div>
+  </div>
+  
+   Add more search results here 
+  
+</div> -->
+
+      <script src="script.js"></script>
+    </body>
+  </html>
+  
