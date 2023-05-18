@@ -73,9 +73,9 @@ textinput.addEventListener('keyup',function(e){
       // console.log('Search results:');
       // results.forEach(result => console.log(result));
     });
-    
+  }
   
-  })
+  });
 
   function renderList(){
     searchresults.innerHTML='';
